@@ -1,0 +1,89 @@
+@import url('https://fonts.cdnfonts.com/css/noto-sans-mono');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    font-family: monospace;
+}
+
+.chat-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h1 {
+    font-size: 40px;
+    padding: 25px;
+}
+
+#start-button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #00BFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#resultado {
+    font-size: 20px;
+    padding: 30px;
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.footer .footer-text {
+    visibility: hidden;
+    width: 130px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.footer .footer-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10x;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.footer:hover .footer-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer-content {
+    color: white;
+    font-size: 20px;
+}
